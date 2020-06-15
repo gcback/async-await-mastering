@@ -130,7 +130,7 @@ async function test() {
 }
 ```
 
-이 책은 async 함수에서 여러분이 `반환`한 값을 "**해결값\(resolved\)**"이라고 부를 것입니다. 위 `computeValue()` 에서 "Hello, world!"는 해결값이지만 `computeValue()`는 여전히 promise을 반환합니다. 이 구분\("반환값"과 "해결값"\)은 미묘하지만 매우 중요합니다: async 함수 본체에서 여러분이 반환하는 그 값은 await 없이 computeValue\(\)를 호출할 때 반환되는 그 값이 아닙니다. 또한 async 함수에서 여러분ㅇ,ㄴ promise을 직접 반환할 수도 있습니다. 이 경우, async 함수가 반환하는 promise는 또 다른 promise이기 때문에 언제든 또다시 해결 또는 취소될 수 있습니다. 다음은 1초 후, "Hello, World!"를 해결 값으로 갖는 async 함수이다.
+이 책은 async 함수에서 여러분이 `반환`한 값을 "**해결값\(resolved\)**"이라고 부를 것입니다. 위 `computeValue()` 에서 "Hello, world!"는 해결값이지만 `computeValue()`는 여전히 promise을 반환합니다. 이 구분\("반환값"과 "해결값"\)은 미묘하지만 매우 중요합니다: async 함수 본체에서 여러분이 반환하는 그 값은 await 없이 computeValue\(\)를 호출할 때 반환되는 그 값이 아닙니다. 또한 async 함수에서 여러분은 promise을 직접 반환할 수도 있습니다. 이 경우, async 함수가 반환하는 promise는 또 다른 promise이기 때문에 언제든 또다시 해결 또는 취소될 수 있습니다. 다음은 1초 후, "Hello, World!"를 해결 값으로 갖는 async 함수이다.
 
 ```jsx
 // example 1.8

@@ -130,7 +130,7 @@ async function test() {
 }
 ```
 
-이 책은 async 함수에서 여러분이 `반환`한 값을 "**해결값\(resolved\)**"이라고 부를 것입니다. 위 `computeValue()` 에서 "Hello, world!"는 해결값이지만 `computeValue()`는 여전히 promise을 반환합니다. 이 구분\("반환값"과 "해결값"\)은 미묘하지만 매우 중요합니다: async 함수 본체에서 여러분이 반환하는 그 값은 await 없이 computeValue\(\)를 호출할 때 반환되는 그 값이 아닙니다. 또한 async 함수에서 여러분ㅇ,ㄴ promise을 직접 반환할 수도 있습니다. 이 경우, async 함수가 반환하는 promise는 또 다른 promise이기 때문에 언제든 또다시 해결 또는 취소될 수 있습니다. 다음은 1초 후, "Hello, World!"를 해결 값으로 갖는 async 함수이다.
+이 책은 async 함수에서 여러분이 `반환`한 값을 "**해결값\(resolved\)**"이라고 부를 것입니다. 위 `computeValue()` 에서 "Hello, world!"는 해결값이지만 `computeValue()`는 여전히 promise을 반환합니다. 이 구분\("반환값"과 "해결값"\)은 미묘하지만 매우 중요합니다: async 함수 본체에서 여러분이 반환하는 그 값은 await 없이 computeValue\(\)를 호출할 때 반환되는 그 값이 아닙니다. 또한 async 함수에서 여러분은 promise을 직접 반환할 수도 있습니다. 이 경우, async 함수가 반환하는 promise는 또 다른 promise이기 때문에 언제든 또다시 해결 또는 취소될 수 있습니다. 다음은 1초 후, "Hello, World!"를 해결 값으로 갖는 async 함수이다.
 
 ```jsx
 // example 1.8
@@ -414,7 +414,7 @@ async function run() {
 
 이 설명들이 async/await의 전부가 아닙니다. 이번 장에서는 promise가 어떻게 async/await와 통합되며 두 비동기 함수들이 동시에 실행될 때 어떤 일이 발생하는지 등, 여러 가지 중요한 세부 사항들을 얼버무렸습니다_**.**_ 2장은 "resolved: 해결된"과 "fulfilled: 이행된"의 차이점을 포함해서 promise의 내막에 초점을 맞추고, 왜 promise가 async/await에 완벽하게 적합한 가를 설명합니다.
 
-## Exercise 1: HTTP Request 반복하
+## Exercise 1: HTTP Request 반복하기
 
 이번 연습 문제의 목적은 반복문과 선택문에서 async/await를 사용하는데 익숙해지는 것입니다. thecodebarbarian.com에서 블로그 게시물 목록을 얻기 위해 `fetch()` API를 사용하고, 각각의 블로그 게시물에 대한 원시 markdown 콘텐츠를 얻기 위해 별도의 fetch\(\)이 필요할 것입니다. 아래는 Google 클라우드에서 호스팅되는 API 접속 주소입니다.
 
